@@ -47,8 +47,10 @@ RUN mkdir -p /opt/nanobox/hooks && \
       -f \
       -k \
       -o /var/nanobox/hooks.md5 \
-      https://s3.amazonaws.com/tools.nanobox.io/hooks/mysql-stable.md5
-
+      https://s3.amazonaws.com/tools.nanobox.io/hooks/mysql-stable.md5 \
+    curl -f -k -o /opt/nanobox/hooks/templates/my.cnf.erb https://raw.githubusercontent.com/nox-digital/nanobox-docker-mysql/master/5.6/my.cnf.erb && \
+    curl -f -k -o /opt/nanobox/hooks/templates/my-prod.cnf.erb https://raw.githubusercontent.com/nox-digital/nanobox-docker-mysql/master/5.6/my-prod.cnf.erb
+    
 # Cleanup disk
 RUN rm -rf \
         /var/lib/apt/lists/* \
