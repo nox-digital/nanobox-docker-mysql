@@ -1,5 +1,6 @@
 # -*- mode: Dockerfile; tab-width: 4;indent-tabs-mode: nil;-*-
 # vim: ts=4 sw=4 ft=Dockerfile et: 1
+# nox digital
 FROM nanobox/runit
 
 # Create directories
